@@ -40,3 +40,69 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[36mPost Load (5.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title goes here"], ["description", "desc goes here"], ["created_at", "2019-11-04 22:01:53.520887"], ["updated_at", "2019-11-04 22:01:53.520887"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/" for ::1 at 2019-11-04 17:05:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/Diego/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Diego/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (8.0ms)
+Completed 200 OK in 49ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-04 17:05:54 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 778ms (Views: 767.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-04 17:06:07 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n2X/fzKZuhB5MOC5XxENZkOKFRTNAG+WGcuH3YOEFwchbyF9ir1LBvR4WV8s5YMJCD7iw/J8EzsR8iyi40TTJQ==", "title"=>"sdf", "description"=>"dfdf", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sdf"], ["description", "dfdf"], ["created_at", "2019-11-04 22:06:07.110289"], ["updated_at", "2019-11-04 22:06:07.110289"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 41ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-04 17:06:49 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-04 17:06:52 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MHFnLE6bd1/Qf3rbBNJ5rKysOaVn97XPay8Yxf5bODOOe7ku9r+GSV03wz13JvfD5xjOcliLyWJjFrO6npv8EQ==", "title"=>"sadfsdf", "description"=>"sdfdsf", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sadfsdf"], ["description", "sdfdsf"], ["created_at", "2019-11-04 22:06:52.728715"], ["updated_at", "2019-11-04 22:06:52.728715"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 38ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-11-04 17:08:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 417ms (Views: 395.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for ::1 at 2019-11-04 17:08:30 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KFlipjTFcziTtDkuHljTEQUGaENhFuW04t4v4plnQzKWU7ykjOGCLh78gMhtrF1+TrKflF5qmRnq54Sd+aeHEA==", "title"=>"sdfdf", "description"=>"sdfsdf", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sdfdf"], ["description", "sdfsdf"], ["created_at", "2019-11-04 22:08:30.164920"], ["updated_at", "2019-11-04 22:08:30.164920"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 2.8ms)
+
+
